@@ -18,3 +18,8 @@ while (i<16) {
     createRow();
     i++;
 }
+
+let squares = document.querySelectorAll(".square");
+for (let square of squares) {
+    square.addEventListener('mouseenter', () => {square.classList.add("hovered")})
+}
