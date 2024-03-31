@@ -31,8 +31,15 @@ createGrid(16);
 const button = document.querySelector("#btn");
 button.addEventListener('click', (num) => {
     num = prompt("Please enter the number of squares you want the grid to have (maximum is 100)");
-    while (container.hasChildNodes()) {
+    if (num == null) {
+
+    } else if (num > 100) {
+        alert("Maximum is 100")
+    } else { 
+        while (container.hasChildNodes()) {
         container.firstChild.remove();
-    }
-    createGrid(num);
+        }
+        createGrid(num);
+        }
+    
 });
