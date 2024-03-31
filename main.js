@@ -1,5 +1,12 @@
 const container = document.querySelector("#container");
 
+function randomColor() {
+    const r = Math.floor(Math.random() * 256);
+    const g = Math.floor(Math.random() * 256);
+    const b = Math.floor(Math.random() * 256);
+    return "rgb(" + r + "," + g + "," + b + ")";
+}
+
 function createGrid(gridNum) {
     function createRow() {
         let row = document.createElement("div");
@@ -7,7 +14,11 @@ function createGrid(gridNum) {
         let i = 0;
         while (i<gridNum) {
             let square = document.createElement("div");
-            square.classList.toggle("square");
+            let squareDimension = 555/gridNum;
+            console.log(squareDimension);
+            square.style.width = squareDimension + "px";
+            square.style.height = squareDimension + "px";
+            square.classList.add("square")
             row.appendChild(square);
             i++;
         }
@@ -22,7 +33,7 @@ function createGrid(gridNum) {
 
     let squares = document.querySelectorAll(".square");
     for (let square of squares) {
-        square.addEventListener('mouseenter', () => {square.classList.add("hovered")})
+        square.addEventListener('mouseenter', () => {square.style.backgroundColor = randomColor()})
     }
 }
 

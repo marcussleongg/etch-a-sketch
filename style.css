@@ -1,19 +1,37 @@
+#titleAndBtn {
+    display: flex;
+    height: 20px;
+    flex-direction: column;
+}
+
+#btn {
+    height: 20px;
+    width: fit-content;
+}
+
+body {
+    display: flex;
+    justify-content: space-between;
+}
+
 .square {
-    height: 30px;
-    width: 30px;
     background-color: pink;
+    margin: 1px;
 }
 
 #container {
+    margin-top: 50px;
+    margin-right: 300px;
     display: flex;
     flex-direction: column;
-    gap: 5px;
     align-items: center;
+    justify-content: center;
+    max-width: 555px;
+    max-height: 555px;
 }
 
 .row {
     display: flex;
-    gap: 5px;
 }
 
 .hovered {
