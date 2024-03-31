@@ -23,3 +23,8 @@ let squares = document.querySelectorAll(".square");
 for (let square of squares) {
     square.addEventListener('mouseenter', () => {square.classList.add("hovered")})
 }
+
+const button = document.querySelector("#btn");
+button.addEventListener('click', (num) => {
+    num = prompt("Please enter the number of squares you want the grid to have (maximum is 100)");
+});
