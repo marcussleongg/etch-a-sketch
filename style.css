@@ -3,3 +3,9 @@
     width: 40px;
     background-color: pink;
 }
+
+#container {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+}
