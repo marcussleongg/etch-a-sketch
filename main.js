@@ -14,7 +14,7 @@ function createGrid(gridNum) {
         let i = 0;
         while (i<gridNum) {
             let square = document.createElement("div");
-            let squareDimension = 555/gridNum;
+            let squareDimension = (535-gridNum)/gridNum;
             console.log(squareDimension);
             square.style.width = squareDimension + "px";
             square.style.height = squareDimension + "px";
@@ -44,8 +44,8 @@ button.addEventListener('click', (num) => {
     num = prompt("Please enter the number of squares you want the grid to have (maximum is 100)");
     if (num == null) {
 
-    } else if (num > 100) {
-        alert("Maximum is 100")
+    } else if (num > 100 || num < 1) {
+        alert("Enter a number between 1 and 100")
     } else { 
         while (container.hasChildNodes()) {
         container.firstChild.remove();
