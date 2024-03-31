@@ -54,3 +54,11 @@ button.addEventListener('click', (num) => {
         }
     
 });
+
+const resetBtn = document.querySelector("#resetbtn");
+resetBtn.addEventListener('click', () => {
+    let squares = document.querySelectorAll(".square");
+    for (let square of squares) {
+        square.style.backgroundColor = "pink";
+    }
+})
